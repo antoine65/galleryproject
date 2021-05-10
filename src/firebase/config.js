@@ -1,6 +1,4 @@
- 
- 
- import * as firebase from 'firebase/app';
+import firebase from 'firebase/app'
  import 'firebase/storage';
  import 'firebase/firestore';
  
@@ -13,11 +11,11 @@
     messagingSenderId: "591466862698",
     appId: "1:591466862698:web:95e8d9136402c6dc4f1213"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+ // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
- const projectStorage = firebase.storage();
- const projectFireStore = firebase.firestore();
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
-
- export { projectStorage , projectFireStore} ;
+export { projectStorage, projectFirestore, timestamp };
